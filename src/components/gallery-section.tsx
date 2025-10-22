@@ -3,12 +3,12 @@
 import { motion } from "framer-motion"
 
 const galleryImages = [
-  { src: "/nightclub-lighting-effects-with-lasers.jpg", alt: "Efectos especiales" },
-  { src: "/professional-dj-equipment-setup-with-lights.jpg", alt: "Equipo DJ profesional" },
-  { src: "/large-speakers-at-outdoor-event.jpg", alt: "Sistema de sonido en evento" },
-  { src: "/wedding-reception-with-elegant-lighting.jpg", alt: "Iluminación para bodas" },
-  { src: "/corporate-event-with-professional-audio-setup.jpg", alt: "Evento corporativo" },
-  { src: "/concert-stage-with-blue-led-lights.jpg", alt: "Iluminación LED en concierto" },
+  { src: "/nightclub-lighting-effects-with-lasers.webp", alt: "Efectos especiales" },
+  { src: "/professional-dj-equipment-setup-with-lights.webp", alt: "Equipo DJ profesional" },
+  { src: "/large-speakers-at-outdoor-event.webp", alt: "Sistema de sonido en evento" },
+  { src: "/wedding-reception-with-elegant-lighting.webp", alt: "Iluminación para bodas" },
+  { src: "/corporate-event-with-professional-audio-setup.webp", alt: "Evento corporativo" },
+  { src: "/concert-stage-with-blue-led-lights.webp", alt: "Iluminación LED en concierto" },
 ]
 
 function ContinuousMarquee({ images, reverse = false }: { images: typeof galleryImages; reverse?: boolean }) {

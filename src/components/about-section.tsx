@@ -67,7 +67,7 @@ export function AboutSection() {
           >
             <div className="relative rounded-2xl overflow-hidden">
               <img
-                src="/professional-audio-engineer-setting-up-equipment-a.jpg"
+                src="/professional-audio-engineer-setting-up-equipment-a.webp"
                 alt="Nuestro equipo profesional"
                 className="w-full h-[500px] object-cover"
               />

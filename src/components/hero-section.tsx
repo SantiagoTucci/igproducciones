@@ -61,7 +61,7 @@ export function HeroSection() {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/professional-concert-stage-with-speakers-and-blue-.jpg"
+          src="/professional-concert-stage-with-speakers-and-blue-.webp"
           alt="Professional sound and lighting equipment"
           className="w-full h-full object-cover"
         />
