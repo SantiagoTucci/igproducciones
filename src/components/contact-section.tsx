@@ -43,15 +43,15 @@ export function ContactSection() {
             className="bg-gradient-to-br from-[#007BFF]/20 to-[#00AEEF]/20 border-2 border-[#007BFF] rounded-2xl p-12 text-center mb-12"
           >
             <MessageCircle className="w-16 h-16 text-[#007BFF] mx-auto mb-6" />
-            <h3 className="text-3xl font-bold text-white mb-4">Consultá por WhatsApp</h3>
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Consultá por WhatsApp</h3>
+            <p className="text-md md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               Respondemos todas tus consultas al instante. Contanos sobre tu evento y te armamos un presupuesto
               personalizado.
             </p>
             <Button
               asChild
               size="lg"
-              className="bg-[#007BFF] hover:bg-[#0066cc] text-white text-lg px-12 py-6 rounded-lg shadow-lg shadow-[#007BFF]/30 transition-all duration-300 hover:shadow-[#007BFF]/50"
+              className="bg-[#007BFF] hover:bg-[#0066cc] text-white text-md md:px-8 md:py-6 px-6 py-5 rounded-lg shadow-lg shadow-[#007BFF]/30 transition-all duration-300 hover:shadow-[#007BFF]/50"
             >
               <a
                 href="https://wa.me/5491154193863?text=Hola!%20Quiero%20cotizar%20mi%20evento"
