@@ -62,41 +62,33 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
+      whileHover={{ scale: 1.03 }}
     >
-      <Card
-        className="relative bg-gradient-to-br from-[#0f0f10] to-[#1b1b1c] border border-[#1f1f20] 
-                   hover:border-[#007BFF]/60 p-5 rounded-2xl overflow-hidden
-                   transition-all duration-500 group hover:shadow-[0_0_20px_#007BFF40]
-                   h-full flex flex-col"
-      >
-        {/* Glow animado de fondo */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#007BFF20] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <Card className="relative bg-white/95 border border-gray-200 p-6 rounded-2xl overflow-hidden h-full flex flex-col group transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(0,123,255,0.4)]">
+        {/* Glow sutil al hover */}
+        <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-[#007BFF]/20 via-transparent to-transparent blur-2xl" />
 
-        {/* Icono decorativo */}
-        <div className="mb-4 p-3 bg-[#007BFF]/10 rounded-xl w-fit group-hover:bg-[#007BFF]/20 transition-colors duration-300">
+        {/* Icono */}
+        <div className="mb-4 p-3 bg-[#007BFF]/10 rounded-xl w-fit group-hover:bg-[#007BFF]/30 transition-colors duration-300">
           <service.icon className="w-8 h-8 text-[#007BFF]" />
         </div>
 
         {/* Contenido */}
-        <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
-        <p className="text-gray-400 text-sm mb-4 flex-grow">{service.description}</p>
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+        <p className="text-gray-600 text-sm mb-4 flex-grow">{service.description}</p>
 
-        {/* Precio y botón */}
+        {/* Precio + Botón */}
         <div className="mt-auto">
           <p className="text-2xl font-bold text-[#007BFF] mb-3">{service.price}</p>
-          <Button
-            asChild
-            className="w-full bg-[#007BFF] hover:bg-[#0066cc] text-white text-sm py-5 rounded-lg shadow-md 
-                       shadow-[#007BFF]/30 hover:shadow-[#007BFF]/50 transition-all duration-300"
+          <a
+            href={`https://wa.me/5491154193863?text=${encodeURIComponent(service.whatsappMessage)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full text-center bg-[#007BFF] hover:bg-[#0066cc] text-white text-sm py-3 rounded-lg shadow-md 
+                      shadow-[#007BFF]/30 hover:shadow-[#007BFF]/50 transition-all duration-300 font-medium"
           >
-            <a
-              href={`https://wa.me/5491154193863?text=${encodeURIComponent(service.whatsappMessage)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Consultar
-            </a>
-          </Button>
+            Consultar
+          </a>
         </div>
       </Card>
     </motion.div>
