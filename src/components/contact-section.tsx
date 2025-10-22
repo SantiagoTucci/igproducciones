@@ -58,7 +58,7 @@ export function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Iniciar Conversación
+                Iniciar conversación
               </a>
             </Button>
           </motion.div>

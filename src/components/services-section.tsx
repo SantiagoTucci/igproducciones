@@ -61,17 +61,34 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
     >
-      <Card className="bg-[#1a1a1a] box-border border-[#2a2a2a] p-6 rounded-xl hover:border-[#007BFF] transition-all duration-300 hover:shadow-lg hover:shadow-[#007BFF]/20 group h-full flex flex-col">
-        <div className="mb-4 p-3 bg-[#007BFF]/10 rounded-lg w-fit group-hover:bg-[#007BFF]/20 transition-colors duration-300">
+      <Card
+        className="relative bg-gradient-to-br from-[#0f0f10] to-[#1b1b1c] border border-[#1f1f20] 
+                   hover:border-[#007BFF]/60 p-5 rounded-2xl overflow-hidden
+                   transition-all duration-500 group hover:shadow-[0_0_20px_#007BFF40]
+                   h-full flex flex-col"
+      >
+        {/* Glow animado de fondo */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#007BFF20] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+        {/* Icono decorativo */}
+        <div className="mb-4 p-3 bg-[#007BFF]/10 rounded-xl w-fit group-hover:bg-[#007BFF]/20 transition-colors duration-300">
           <service.icon className="w-8 h-8 text-[#007BFF]" />
         </div>
-        <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
-        <p className="text-gray-400 mb-4 flex-grow">{service.description}</p>
+
+        {/* Contenido */}
+        <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+        <p className="text-gray-400 text-sm mb-4 flex-grow">{service.description}</p>
+
+        {/* Precio y botón */}
         <div className="mt-auto">
-          <p className="text-3xl font-bold text-[#007BFF] mb-4">{service.price}</p>
-          <Button asChild className="w-full bg-[#007BFF] hover:bg-[#0066cc] text-white rounded-lg">
+          <p className="text-2xl font-bold text-[#007BFF] mb-3">{service.price}</p>
+          <Button
+            asChild
+            className="w-full bg-[#007BFF] hover:bg-[#0066cc] text-white text-sm py-5 rounded-lg shadow-md 
+                       shadow-[#007BFF]/30 hover:shadow-[#007BFF]/50 transition-all duration-300"
+          >
             <a
               href={`https://wa.me/5491154193863?text=${encodeURIComponent(service.whatsappMessage)}`}
               target="_blank"
@@ -91,22 +108,26 @@ export function ServicesSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="servicios" className="py-16 bg-[#0a0a0a]">
+    <section id="servicios" className="py-18 bg-[#0a0a0a]">
       <div className="container mx-auto px-4">
+        {/* Título con animación */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Nuestros <span className="text-[#007BFF]">Servicios</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">Equipos profesionales para todo tipo de eventos</p>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Equipos profesionales para todo tipo de eventos
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Grid de servicios */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
           {services.map((service, index) => (
             <ServiceCard key={service.title} service={service} index={index} />
           ))}

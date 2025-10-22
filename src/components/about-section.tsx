@@ -17,7 +17,7 @@ export function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="nosotros" className="py-14 bg-[#0a0a0a] overflow-x-hidden">
+    <section id="nosotros" className="py-14 md:py-16 bg-[#0a0a0a] overflow-x-hidden">
       <div className="container mx-auto px-6 md:px-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
@@ -74,8 +74,8 @@ export function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
             </div>
             {/* Decorative Elements */}
-            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#007BFF]/20 rounded-full blur-3xl -z-10" />
-            <div className="absolute -top-6 -left-6 w-48 h-48 bg-[#00AEEF]/20 rounded-full blur-3xl -z-10" />
+            <div className="absolute -bottom-6 -right-6 w-35 h-25 bg-[#007BFF]/20 rounded-full blur-3xl -z-10" />
+            <div className="absolute -top-6 -left-6 w-35 h-25 bg-[#00AEEF]/20 rounded-full blur-3xl -z-10" />
           </motion.div>
         </div>
       </div>

@@ -97,7 +97,7 @@ export function HeroSection() {
           <Button
             asChild
             size="lg"
-            className="bg-[#007BFF] hover:bg-[#0066cc] text-white text-lg px-8 py-6 rounded-lg shadow-lg shadow-[#007BFF]/20 transition-all duration-300 hover:shadow-[#007BFF]/40"
+            className="bg-[#007BFF] hover:bg-[#0066cc] text-white text-md md:px-8 md:py-6 px-6 py-5 rounded-lg shadow-lg shadow-[#007BFF]/20 transition-all duration-300 hover:shadow-[#007BFF]/40"
           >
             <a href="#servicios" onClick={handleScrollToServices}>
               Ver Servicios
@@ -107,7 +107,7 @@ export function HeroSection() {
             asChild
             size="lg"
             variant="outline"
-            className="border-2 border-[#007BFF] text-[#007BFF] hover:bg-[#007BFF] hover:text-white text-lg px-8 py-6 rounded-lg transition-all duration-300 bg-transparent"
+            className="border-2 border-[#007BFF] text-[#007BFF] hover:bg-[#007BFF] hover:text-white text-md md:px-8 md:py-6 px-6 py-5 rounded-lg transition-all duration-300 bg-transparent"
           >
             <a
               href="https://wa.me/5491112345678?text=Hola!%20Quiero%20consultar%20por%20alquiler%20de%20equipos"
