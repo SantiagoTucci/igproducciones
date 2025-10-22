@@ -82,7 +82,7 @@ export function HeroSection() {
         animate="visible"
       >
         <motion.h1
-          className="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight text-balance"
+          className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight text-balance"
           variants={textItem}
         >
           Equipos de Sonido e Iluminación <span className="text-[#007BFF]">Profesional</span> para tu Evento
