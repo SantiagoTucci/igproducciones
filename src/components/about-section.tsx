@@ -17,7 +17,7 @@ export function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="nosotros" className="py-14 md:py-16 bg-[#0a0a0a] overflow-x-hidden">
+    <section id="nosotros" className="py-18 md:py-22 bg-[#0a0a0a] overflow-x-hidden">
       <div className="container mx-auto px-6 md:px-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}

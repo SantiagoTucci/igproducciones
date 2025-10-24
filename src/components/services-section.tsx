@@ -100,7 +100,7 @@ export function ServicesSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="servicios" className="py-18 bg-[#0a0a0a]">
+    <section id="servicios" className="py-18 md:py-24 bg-[#0a0a0a]">
       <div className="container mx-auto px-4">
         {/* Título con animación */}
         <motion.div
