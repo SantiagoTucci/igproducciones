@@ -17,7 +17,7 @@ function ContinuousMarquee({ images, reverse = false }: { images: typeof gallery
   const allImages = [...images, ...images]
 
   return (
-    <div className="overflow-hidden py-4 relative">
+    <div className="overflow-hidden py-2 relative">
       <motion.div
         className="flex gap-6"
         animate={{ x: reverse ? ["0%", "-50%"] : ["-50%", "0%"] }}
@@ -32,7 +32,7 @@ function ContinuousMarquee({ images, reverse = false }: { images: typeof gallery
         {allImages.map((image, index) => (
           <div
             key={index}
-            className="w-72 h-64 md:w-120 md:h-70 flex-shrink-0 cursor-pointer"
+            className="w-72 h-60 md:w-110 flex-shrink-0 cursor-pointer"
           >
             <img
               src={image.src}

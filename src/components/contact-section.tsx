@@ -26,7 +26,7 @@ export function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               <span className="text-[#007BFF]">Contacto</span>
@@ -40,7 +40,7 @@ export function ContactSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gradient-to-br from-[#007BFF]/20 to-[#00AEEF]/20 border-2 border-[#007BFF] rounded-2xl p-12 text-center mb-12"
+            className="bg-gradient-to-br from-[#007BFF]/20 to-[#00AEEF]/20 border-2 border-[#007BFF] rounded-2xl p-12 text-center mb-8"
           >
             <MessageCircle className="w-16 h-16 text-[#007BFF] mx-auto mb-6" />
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Consultá por WhatsApp</h3>
